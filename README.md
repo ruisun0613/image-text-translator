@@ -139,4 +139,4 @@ http://localhost:5173
 2. The Flask backend validates the image and uploads it to Amazon S3.
 3. Amazon Rekognition detects text contained in the uploaded image.
 4. The detected text is sent to Amazon Translate.
-5. The translated result is returned through the API and displayed to the user.gi
+5. The translated result is returned through the API and displayed to the user.
