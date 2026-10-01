@@ -2,6 +2,9 @@
 
 A cloud-based image text translation application built with Python, Flask, and AWS services. The application uploads images to Amazon S3, detects text using Amazon Rekognition, and translates the detected text into a selected target language using Amazon Translate.
 
+## Demo
+![Image Text Translator Demo](demo/demo.png)
+
 ## Features
 
 * Upload images through a web interface
@@ -136,12 +139,4 @@ http://localhost:5173
 2. The Flask backend validates the image and uploads it to Amazon S3.
 3. Amazon Rekognition detects text contained in the uploaded image.
 4. The detected text is sent to Amazon Translate.
-5. The translated result is returned through the API and displayed to the user.
-
-## Future Improvements
-
-* Batch image processing
-* Persistent database storage
-* User authentication
-* Improved OCR result formatting
-* Additional automated testing
+5. The translated result is returned through the API and displayed to the user.gi

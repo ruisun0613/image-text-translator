@@ -15,15 +15,23 @@ body {
   padding: 20px;
 }
 
-h1 {
+.page-header {
   text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
   margin-bottom: 10px;
 }
 
+h2 {
+  margin-top: 0;
+}
+
 .subtitle {
-  text-align: center;
   color: #666;
-  margin-bottom: 30px;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .card {
@@ -34,25 +42,59 @@ h1 {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
+.form-group {
+  margin-bottom: 18px;
+}
+
 label {
   display: block;
-  margin-top: 12px;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   font-weight: bold;
 }
 
-input,
 select {
   width: 100%;
-  padding: 10px;
+  padding: 11px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  background: white;
 }
+
+/* Custom file upload */
+
+.upload-box {
+  border: 2px dashed #c7ccd1;
+  border-radius: 10px;
+  padding: 22px;
+  text-align: center;
+  cursor: pointer;
+  background: #fafafa;
+  transition: 0.2s;
+}
+
+.upload-box:hover {
+  border-color: #007bff;
+  background: #f5f9ff;
+}
+
+.upload-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.upload-file-name {
+  display: block;
+  color: #777;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Buttons */
 
 .button-group {
   display: flex;
   gap: 10px;
-  margin-top: 15px;
 }
 
 button {
@@ -62,6 +104,16 @@ button {
   cursor: pointer;
   background: #007bff;
   color: white;
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 button.secondary {
@@ -73,19 +125,23 @@ button.small {
   font-size: 13px;
 }
 
+/* Messages */
+
 .status {
   color: #007bff;
-  margin-top: 10px;
+  margin: 12px 0 0;
 }
 
 .error {
-  color: red;
-  margin-top: 10px;
+  color: #d93025;
+  margin: 12px 0 0;
 }
 
+/* Preview */
+
 .preview-box {
-  min-height: 250px;
-  border: 2px dashed #ccc;
+  min-height: 280px;
+  border: 2px dashed #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,10 +151,24 @@ button.small {
 }
 
 .preview-box img {
-  max-width: 100%;
-  max-height: 400px;
   display: none;
+  max-width: 100%;
+  max-height: 420px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
+
+.preview-placeholder {
+  min-height: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #888;
+}
+
+/* Results */
 
 .grid {
   display: grid;
@@ -113,6 +183,7 @@ button.small {
   border-radius: 8px;
   background: #fafafa;
   white-space: pre-wrap;
+  line-height: 1.5;
 }
 
 .header-row {
@@ -121,7 +192,14 @@ button.small {
   align-items: center;
 }
 
+/* Mobile */
+
 @media (max-width: 768px) {
+  .container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }
